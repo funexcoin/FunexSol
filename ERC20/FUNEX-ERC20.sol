@@ -1,8 +1,9 @@
 /**
- *Submitted for verification at Etherscan.io on 2021-10-18
+ *Submitted for verification at Etherscan.io on 2022-08-25
 */
 
 pragma solidity 0.5.16;
+
 interface IERC20 {
   function totalSupply() external view returns (uint256);
   function decimals() external view returns (uint8);
@@ -134,8 +135,8 @@ contract FunexCoin is Context, IERC20, Ownable {
   constructor() public {
     _name = "FunexCoin";
     _symbol = "Funex";
-    _decimals = 6;
-    _totalSupply = 50000000000000;
+    _decimals = 18;
+    _totalSupply = 50000000000000000000000000;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
